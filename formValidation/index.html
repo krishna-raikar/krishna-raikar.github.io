@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>This is basic validation</title>
+        <link rel='stylesheet' href='css/bootstrap.css'  type='text/css'>
+        <script type='text/javascript' src='js/validateForm.js'></script>
+        <script>
+            function popup(){
+                var myform=document.getElementById('myform');
+                myform.className = 'form-later';
+            }
+            
+        </script>
+        <style>
+            
+            @font-face{
+                font-family: 'myfont';
+                src : url('fonts/OpenSans-Regular.ttf');
+
+             }
+
+              .error-code{
+                   color : red;
+                   font-weight: 600;
+                   /*transition: .9s all ease;*/
+              }
+              .error-code-rm{
+                   display : none;          
+              }
+              
+              .bordr{
+                    
+                    border-radius:  0 0 10px 10px;
+                    padding : 20px;
+                    background-color : #f2f2f2;
+                   
+              }
+              
+              body{
+                background-color: black;
+                /*font-family: 'myfont', OpenSans-Regular;*/
+                font-family : Arial;
+              }
+              
+              input{
+                    font-weight: 600;                  
+              }
+              
+              .form-initial{
+                    margin-top: -600px;                    
+              }
+              
+              .form-later{
+                   transition: .5s all ease;
+                   margin-top: 5px;
+              }
+              .signup-banner{
+                 background-color : #ff1a66;
+                 color : white;
+                 padding: 10px 0px;
+                 font-size: 2.5em;
+                 font-weight: 500;
+                 text-align: center;
+                 border-radius: 10px 10px 0 0;
+              }
+              
+              img{
+                width : 50px;
+                height : 50px;
+              }
+        </style>
+        <script>
+
+</script>
+    </head>
+    <body onload='popup()'>        
+        <form id='myform' class='form-initial'>
+            <div class='col-md-4 col-md-offset-4'>
+                <div class='signup-banner'><img src="icon/lock.png"/><div>sign up</div></div>
+                
+                <div class='bordr'>
+                <div class='form-group'>
+                    <label for='fname'>First Name</label>
+                    <input type=text class='form-control' name='fname' id='fname' placeholder='First Name' onblur='validatefName(this.form)'/>
+                    <span id="errorFirstName"></span>
+                </div>
+                <div class='form-group'>
+                    <label for='lname'>Last Name</label>
+                    <input type=text class='form-control' name='lname' placeholder='Last Name' onblur='validatelName(this.form)'/>
+                    <span id="errorLastName"></span>
+                </div>
+                <div class='form-group'>
+                    <label for='pass'>Password</label>
+                    <input type=password class='form-control' name='pass' placeholder='Password' onblur='validatePassword(this.form)'/>
+                    <span id="errorPass"></span>
+                </div>
+                <div class='form-group'>
+                    <label for='repass'>Reenter password</label>
+                    <input type=password class='form-control' name='repass' placeholder='Password again' onblur='validateRePassword(this.form)'>
+                    <span id="errorRepass"></span>
+                </div>
+                <div class='form-group'>
+                    <div class="radio">
+                        <label><input type="radio" name="optradio">Male</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="optradio">Female</label>
+                    </div>
+                    <span id="errorGender"></span>
+                </div>
+                <div class='form-group'>
+                    <label for='phone'>Mobile No</label>
+                    <input type=text class='form-control' name='phone' placeholder='mobile no' onblur='validatePhone(this.form)'/>
+                    <span id="errorPhone"></span>
+                </div>
+                <div class='form-group'>
+                    <label for='comment'>Comments</label>
+                    <textarea class='form-control' rows=3 name='comment'></textarea>
+                    <span id="errorComment"></span>
+                </div>
+                <button type='submit' class='btn btn-md btn-primary btn-block' onclick='validateFull(this.form,event)'>submit</button>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>

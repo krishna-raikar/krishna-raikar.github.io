@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="css/reset.css" type="text/css">
+	<link rel="stylesheet" href="css/overridestyle.css" type="text/css">
+	<link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/validate-form.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#signup-bt").click(function(event){
+				   event.preventDefault();			   
+				   var errflag=validateFull(document.forms[1]);
+				   if (errflag) {
+					    $(".error_block").slideDown(500);
+				   }
+				   else{
+					  $(".error_block").slideUp(500);
+				   }				
+			});
+			
+			$("#close_err").click(function(){
+			       $(".error_block").slideUp(500);
+				
+				
+			});
+			$("#signin-form [name='username'],#signin-form [name='password']").on("keyup",function(){
+				    validateFormSignin();
+				});
+
+			function validateFormSignin(){
+			     if ($("#signin-form [name='username']").val().length>0 && $("#signin-form [name='password']").val().length>0) {
+					$("#signin").prop('disabled', false);
+				}
+				else
+				   $("#signin").prop('disabled', true);
+					
+			}
+			
+		});
+	</script>
+	
+</head>
+<body>
+<div class="header">
+<div class="row">
+    <div class='col-lg-12 col-md-12 col-sm-12'>
+        
+            <div class="header_wrapper">
+				<div>
+                <img src="images/linked-in-logo.png">
+                <div class="login_head">
+                    <form class='form-inline' id='signin-form'>
+                        <div class="form-group"><input type=text name=username id=username class="form-control" placeholder=username></div>
+							<div class="form-group"><input type=text name=password class="form-control" placeholder=password></div>
+                        <div class="form-group"><button type='button' class='btn btn-default btn-block btn-modern2' id='signin' disabled>Sign in</button></div>
+                    </form>
+                </div>
+                </div>
+				<div class='forgot_pass'>
+					<a href=#>forgot password?</a>
+				</div>
+			</div>
+        
+        </div>
+</div>
+</div>
+</head>
+
+
+
+<div class="main">
+            <!--<img src="bgimage.jpg" style="width:100%"/>-->
+			<div class="row">
+			<div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
+		    <div class="reg-form-container">
+				<div class="form-wrapper">
+					<h1>Be great at what you do</h1>
+					<h2>Get started - it's free.</h2>
+					<div class='error_block'>
+						<span class="glyphicon glyphicon-remove-circle"></span>
+						<span id="error_text"></span>
+						<span id="close_err" class="glyphicon glyphicon-remove"></span>
+					</div>															
+					
+					<form id="signup-form">
+						<div class='form-group'>
+							<label for=firstname>First name</label>
+					    <input type=text class="form-control" id=firstname onchange="validatefName()">
+						</div>
+						
+						<div class='form-group'>
+						<label for=lastname>Last name</label>
+						<input type=text class=form-control id=lastname>
+						</div>
+						
+						<div class='form-group'>
+						<label for=email>Email</label>
+						<input type=text class=form-control id=email>
+						</div>
+						
+						<div class='form-group'>
+						<label for=password>Password</label>
+						<input type=password class=form-control id=password>
+						</div>
+						
+						<p class=discosure-text>By clicking Join now, you agree to LinkedIn's
+						<a href=#>User Agreement</a>,
+						<a href=#>Privacy Policy</a>,
+						and <a href=#>Cookie Policy</a></p>
+						
+						<div class='form-group'>
+						<button id="signup-bt" type="submit" class="btn btn-primary btn-md btn-block btn-modern"><span class="fill_bt">Join now</span></button>
+						
+						</div>
+					</form>
+					
+				</div>				
+			</div>
+			</div>
+			</div>
+</div>
+
+
+		<div class="footer">
+	<div class="row">		
+    <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+	<div class='browse'>
+        <div class="search">
+            <form class="form-inline">
+                <span style='color:white;' class=h5>Find a colleague:</span>
+                <div class='form-group'><input type=text class="form-control" placeholder="First name" name="first"></div>
+                <div class='form-group'><input type=text class="form-control" placeholder="Last name" name="last"></div>
+                <div class='form-group'><button type=button class="btn btn-default btn-modern2" name="first" >search</button></div>
+            </form>
+            
+            
+        </div>
+        
+		<div class="directory">
+            <h3>Linkedin member directory:</h3>
+            <ol>
+                <li><a href="#">A</a></li>
+                <li><a href="#">B</a></li>
+                <li><a href="#">C</a></li>
+                <li><a href="#">D</a></li>
+                <li><a href="#">E</a></li>
+                <li><a href="#">F</a></li>
+                <li><a href="#">G</a></li>
+                <li><a href="#">H</a></li>
+                <li><a href="#">I</a></li>
+                <li><a href="#">J</a></li>
+                <li><a href="#">K</a></li>
+                <li><a href="#">L</a></li>
+                <li><a href="#">M</a></li>
+                <li><a href="#">N</a></li>
+                <li><a href="#">O</a></li>
+                <li><a href="#">P</a></li>
+                <li><a href="#">Q</a></li>
+                <li><a href="#">R</a></li>
+                <li><a href="#">S</a></li>
+                <li><a href="#">T</a></li>
+                <li><a href="#">U</a></li>
+                <li><a href="#">V</a></li>
+                <li><a href="#">W</a></li>
+                <li><a href="#">X</a></li>
+                <li><a href="#">Y</a></li>
+                <li><a href="#">Z</a></li>
+                <li><a href="#">More</a></li>
+                <li><a href="#">| Browse by country</a></li>
+                
+            </ol>
+        </div>
+    </div>
+	</div>
+	</div>
+	<div class="row">
+	<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+    <div class='links'>
+        <div class='link-blocks'>
+            <h3>General</h3>
+            <ol>
+                <li><a href=#>Sign Up</a></li>
+                <li><a href=#>Help center</a></li>
+                <li><a href=#>About</a></li>
+                <li><a href=#>Press</a></li>
+                <li><a href=#>Blog</a></li>
+                <li><a href=#>Careers</a></li>
+                <li><a href=#>Developers</a></li>
+            </ol>
+        </div>
+        <div class='link-blocks'>
+            <h3>Buisness Solutions</h3>
+            <ol>
+                <li><a href=#> Talent </a></li>
+                <li><a href=#> Marketing </a></li>
+                <li><a href=#> Sales </a></li>
+            </ol>
+        </div>
+        <div class='link-blocks'>
+            <h3>Browse LinkedIn</h3>
+            <ol>
+                <li><a href=#>Updates</a></li>
+                <li><a href=#>Influencers</a></li>
+                <li><a href=#>Jobs</a></li>
+                <li><a href=#>Mobile</a></li>
+            </ol>
+        </div>
+        <div class='link-blocks'>
+            <h3>Directories</h3>
+            <ol>
+                <li><a href=#>Members</a></li>
+                <li><a href=#>Jobs</a></li>
+                <li><a href=#>Pulse</a></li>
+                <li><a href=#>Companies</a></li>
+                <li><a href=#>Groups</a></li>
+                <li><a href=#>Universities</a></li>
+                <li><a href=#>Tities</a></li>
+            </ol>
+        </div>
+    </div>
+	</div>
+	</div>
+    <div class='legalinfo'>
+        <img src="images/linked_footer_logo.png">
+        <ul>
+            <li><a href=#>User agreement</a></li>
+            <li><a href=#>Privacy Policy</a></li>
+            <li><a href=#>Community Guidelines</a></li>
+            <li><a href=#>Cookie policy</a></li>
+            <li><a href=#>Copyright Policy</a></li>
+            <li><a href=#>Guest Controls</a></li>
+            <li><a href=#>Language</a></li>
+        </ul>
+    </div>
+</div>
+	
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,247 @@
+
+.header .footer{
+    position : static;
+}
+
+.header{
+    height : auto;
+    width : 100%;
+    background-color: #2E2E2E;
+    overflow: hidden;
+   
+}
+
+
+.header_wrapper{
+    margin : auto;
+    width : 70%;
+    height : auto;
+	padding-bottom: 20px;
+	margin-bottom: 10px;
+    position : relative;
+}
+
+.header_wrapper img{
+    float : left;
+    padding-top : 15px;
+	
+}
+	
+.login_head{
+    text-align: right;
+    padding-top : 10px;
+}
+
+
+.footer{
+    font-size : 12px;
+    width : 100%;
+	height : auto;
+    background-color: #2E2E2E;
+    overflow: hidden;
+}
+
+.browse{
+    width : 100%;
+    text-align: center;
+    margin : 0 auto;
+    padding-bottom : 20px;
+    border-bottom : 1px solid grey;
+    padding : 5px;
+}
+.search{
+    padding-top : 20px;
+}
+.directory{
+    margin-top : 20px;
+}
+.directory h3{
+	color : #cccccc;
+	display : inline;
+}
+.directory ol{
+    display : inline;
+}
+.directory ol li{
+    display : inline;
+}
+
+.links{
+    
+    margin : 0 auto;
+    text-align :center;
+    padding-bottom : 20px;
+    width : 100%;
+	padding : 5px;
+}
+
+.links a{
+   color : #CCCCCC;
+}
+
+.link-blocks{
+    width : 49%;
+    display : inline-block;
+    text-align : left;
+    margin : 20px 0px 0 0;
+	
+}
+.link-blocks h3{
+    color : #ccc;
+    font-weight: 800;
+    line-height: 25px;
+}
+.link-blocks ol li{
+    display :inline;
+    padding: 0px 4px 0px 4px;
+    border-right : 1px solid grey;
+}
+
+.link-blocks ol li:last-child{
+    border-right : 0px;
+}
+
+.legalinfo{
+    width : 100%;
+    padding : 20px  0;
+    text-align : center;
+    background-color: #000000;
+}
+.footer-logo{
+   display : inline;
+}
+.legalinfo ul{
+    display : inline;
+    
+}
+.legalinfo ul li{
+    display : inline;
+    padding : 0 10px;
+    
+}
+body{
+    font-size : 14px;
+    font-family  : Arial;
+}
+
+/*--------------------------------------------*/
+
+/**--------------------------------------------**/
+/*/reg form css*/
+
+	.main{
+     position: relative;
+	 border : 1px solid black;
+	 background: url("../images/bgimage.jpg");
+	 width : 100%;
+	 height:auto;
+	 background-color : grey;
+	 overflow: hidden;
+     }	 
+
+.reg-form-container{
+	width : 95%;
+	height : auto;
+	background-color: #EEEEEE;
+	z-index: 1000;
+	/*bottom:0;
+	top : 0;
+	left : 0;
+	right : 0;*/
+	margin : 0 auto;
+	margin : 10px;
+	
+}
+
+
+
+
+
+.form-wrapper{
+	padding : 25px;
+}
+
+.discosure-text{
+	text-align: center;
+	color : #66696a;
+	font-size: 12px;
+	margin : 10px 0px;
+	line-height: 14px;
+}
+
+h1,h2{
+	text-align: center;
+}
+h1{
+	font-size: 22px;
+	margin : 0 0 10px 0;
+}
+h2{
+	font-size : 16px;
+	margin : 5px 0 15px 0;
+	
+}
+
+
+
+.error_block{
+	background-color : #DD3737;
+	color : white;
+	font-weight: 500;
+	width : 100%;
+	padding : 10px 10px;
+	margin-bottom: 10px;
+	position: relative;
+    display : none;
+
+}
+
+.error_block_show{
+	display: block;
+}
+
+.glyphicon-remove-circle{
+	font-size: 15px;
+}
+
+#close_err{
+	position: absolute;
+	right : 0;
+	padding: 10px 10px;
+	font-size : 10px;
+}
+#close_err:hover{
+	cursor: pointer;
+}
+
+/*-----------------------------*/
+.highlight_error{
+	border : 1px solid red;
+}
+
+.forgot_pass{
+	position: absolute;
+	right : 0;
+	color : white;
+	line-height: 22px;
+}
+
+.forgot_pass a{
+	color : #F0F0F0;
+}
+
+#signin-form #signin:hover{
+	cursor: pointer;
+}
+/*
+
+.row-no-padding1 {
+  [class*="col-"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+/** {
+    outline: 1px solid red;
+}*/

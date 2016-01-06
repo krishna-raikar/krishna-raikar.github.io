@@ -1,12 +1,36 @@
+<!DOCTYPE html>
+
 <html>
 <head>
-   <title>web exercises</title>
+   <title>web exercises | krishna</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css">
+    <link rel="icon" type="image/png" href="icon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+        $(window).load(function(){
+                var myform=document.getElementById('outer');
+                myform.className = 'form-later';
+            }   
+            );
+        
+            
+            
+        </script>
    <style>
-   		.header{
-   			font-size: 2.5em;
-   			font-weight: 600;
-   			color  : #ff0f0f;
-   		}
+    
+        .form-later{
+            transition: 0.5s all ease;
+            margin-top : 10px;
+        }
+          
+          .header{
+                            
+               background-color :#33FFCC;
+               padding : 20px 5px;
+               margin-top : 2px;
+               margin-bottom: 25px;
+            }    
+   		
    		a{
    			text-decoration: none;
    			font-size: 1em;
@@ -14,15 +38,91 @@
    			font-weight: 700;
    			font-family: Arial;
    		}
+        
+        
+        body{
+            background-color: #6C6C6C;
+        }
+        .wrapper{
+            background-color : #ffffff;
+            box-shadow: 1px 1px 5px #2E2E2E;
+            margin : 0 auto;
+            width : 90%;
+            height : 600px;
+            padding : 2px 15px 15px 15px;
+            border-radius: 5px;
+           
+        }
+        
+        .wrap-initial{
+             margin-top: -100px;
+        }
+        
+        
+        
+        .myname{
+            font-weight: 600;
+            font-size: 1.0em;
+            color : #ff9966;
+        }
+        
+        .h{
+            font-size: 2.5em;
+            font-weight: 600;
+            color : #06997E;
+            text-shadow:0px 1px #ffffff,0px -1px black;
+        }
+        
+        
 
    </style>
    </head>
    <body>
-   <p class='header'>Web Works</h2><hr/>
-   <ul>
-   <li><a href="website/index.html">website</a></li><br>
-   <li><a href="formValidation/index.html">form validation</a></li><br>
-   <li><a href="linkedin/index.html">linked-in website</a></li><br>
-   </ul>
+   
+   <div class="container">
+    <div class="wrap-initial" id="outer">
+    <div class="wrapper" id="wrap">
+        <div class="header">
+            <div class="h">Assignment List</div>
+            <div class="myname">>>krishna raikar</div>
+        </div>
+    
+   <table class="table table-hover">
+     <thead>
+        <tr>
+            <th>SINO</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Date</th>
+            <th>Action</th>
+        </tr>
+     </thead>
+     <tbody>
+        <tr>
+            <td>1</td>
+            <td>basic website</td>
+            <td>basic level website build with html,css</td>
+            <td>15-dec-2015</td>
+            <td><a href="website/index.html">open</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>form validation</td>
+            <td>validation of basic form using javascript(also used html,css)</td>
+            <td>22-dec-2015</td>
+            <td><a href="formValidation/index.html">open</a></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>LinkedIn website</td>
+            <td>To create a exact copy of linkedin website with technologies like javascript,jquery,bootstrap,html5,css</td>
+            <td>6-jan-2016</td>
+            <td><a href="linkedin/index.html">open</a></td>
+        </tr>
+     </tbody>
+   </table>
+    </div>
+   </div>
+    </div>
    </body>
    </html>
